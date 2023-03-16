@@ -1,0 +1,26 @@
+{
+    "type": "relation",
+    "script": "./scripts/get_tcp_connections.sh",
+    "output_format": "csv",
+    "left_node": "Server",
+    "left_name": "$1",
+    "left_cond": "ip: '$1'",
+    "left_params": {
+        "ip": "$1"
+    },
+    "right_node": "Server",
+    "right_name": "$3",
+    "right_cond": "ip: '$3'",
+    "right_params": {
+        "ip": "$3"
+    },
+    "rel_name": "CONNECTED",
+    "rel_params": {
+        "left_port": "$2",
+        "right_port": "$4"
+    },
+    "enable_node_creation": "true",
+    "enable_node_update": "false",
+    "enable_relation_delete": "false",
+    "enable_relation_update": "false"
+}

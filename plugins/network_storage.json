@@ -1,0 +1,25 @@
+{
+    "type": "relation",
+    "script": "./scripts/get_network_storage.sh",
+    "output_format": "csv",
+    "left_node": "",
+    "left_name": "",
+    "left_cond": "",
+    "left_params": {},
+    "right_node": "Storage",
+    "right_name": "$1",
+    "right_cond": "",
+    "right_params": {
+        "type": "network",
+        "mount": "$2",
+        "allocated": "$3",
+        "used": "$4",
+        "available": "$5"
+    },
+    "rel_name": "HAS_MOUNT",
+    "rel_params": {},
+    "enable_node_creation": "true",
+    "enable_node_update": "true",
+    "enable_relation_delete": "false",
+    "enable_relation_update": "false"
+}

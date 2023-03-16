@@ -1,0 +1,13 @@
+{
+    "type": "Service",
+    "name": "PkBox",
+    "details": {
+        "description": "Run Intesi PkBox Server"  
+    },
+    "script": {
+        "script": "./scripts/check_pkbox.sh",
+        "relation": "RUNNING",
+        "truevalue": "1",
+        "falsevalue": "0"
+    }
+}

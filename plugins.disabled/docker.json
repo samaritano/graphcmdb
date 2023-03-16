@@ -1,0 +1,13 @@
+{
+    "type": "Service",
+    "name": "Docker",
+    "details": {
+        "description": "Run Docker Containers"  
+    },
+    "script": {
+        "script": "./scripts/check_docker.sh",
+        "relation": "RUNNING",
+        "truevalue": "1",
+        "falsevalue": "0"
+    }
+}

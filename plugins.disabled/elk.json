@@ -1,0 +1,13 @@
+{
+    "type": "Service",
+    "name": "ELK",
+    "details": {
+        "description": "Run ELK Stack"  
+    },
+    "script": {
+        "script": "./scripts/check_elk.sh",
+        "relation": "RUNNING",
+        "truevalue": "1",
+        "falsevalue": "0"
+    }
+}

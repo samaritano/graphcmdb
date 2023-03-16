@@ -1,0 +1,13 @@
+{
+    "type": "Service",
+    "name": "Tomcat",
+    "details": {
+        "description": "Run Tomcat Application Server"  
+    },
+    "script": {
+        "script": "./scripts/check_tomcat.sh",
+        "relation": "RUNNING",
+        "truevalue": "1",
+        "falsevalue": "0"
+    }
+}

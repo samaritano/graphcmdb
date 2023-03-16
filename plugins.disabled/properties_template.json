@@ -1,0 +1,11 @@
+{
+    "type": "properties",
+    "script": "./scripts/get_local_storage.sh",
+    "output_format": "csv",
+    "node_params": {
+        "mount": "$1",
+        "allocated": "$2",
+        "used": "$3",
+        "available": "$4"
+    }
+}

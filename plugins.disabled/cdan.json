@@ -1,0 +1,13 @@
+{
+    "type": "Environment",
+    "name": "CDAN",
+    "details": {
+        "description": "CDAN SaaS"  
+    },
+    "script": {
+        "script": "./scripts/check_cdan.sh",
+        "relation": "HAS_ROLES",
+        "truevalue": "1",
+        "falsevalue": "0"
+    }
+}
