@@ -2,26 +2,26 @@
 
 HOSTNAME=`hostname -s | awk '{print tolower($0)}'`
 case $HOSTNAME in
-    *"apache"*)
+    *"server1"*)
         echo "1"
         ;;
-    *"dbapm"*)
+    *"server2"*)
         echo "1"
         ;;
-    *"dbaps"*)
+    *"server3"*)
         echo "1"
         ;;
-    *"jexecso"*)
+    *"server4"*)
         echo "1"
         ;;
-    *"stexecso"*)
+    *"server5"*)
         echo "1"
         ;;
-    *"urbi"*)
-        if [[ $HOSTNAME == *"buf"* ]]; then
+    *"server6"*)
+        if [[ $HOSTNAME == *"app1"* ]]; then
             echo "0"
         else
-            if [[ $HOSTNAME == *"wt"* ]]; then
+            if [[ $HOSTNAME == *"app2"* ]]; then
                 echo "0"
             else
                 echo "1"

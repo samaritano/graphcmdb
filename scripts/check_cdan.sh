@@ -2,13 +2,13 @@
 
 HOSTNAME=`hostname -s | awk '{print tolower($0)}'`
 case $HOSTNAME in
-    *"cdan"*)
+    *"pippo"*)
         echo "1"
         ;;
-    *"elk01"*)
+    *"pluto"*)
         echo "1"
         ;;
-    *"tomcat"*)
+    *"topolino"*)
         echo "1"
         ;;
     *)

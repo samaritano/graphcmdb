@@ -2,7 +2,7 @@
 
 HOSTNAME=`hostname -s | awk '{print tolower($0)}'`
 case $HOSTNAME in
-    *"wt"*)
+    *"server1"*)
         echo "1"
         ;;
     *)
