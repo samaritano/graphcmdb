@@ -302,6 +302,8 @@ func main() {
 	discoveryListFileName := os.Args[4]
 	neoHost := os.Args[5]
 	neoPort := os.Args[6]
+	neoUser := os.Args[7]
+	neoPass := os.Args[8]
 
 	now := time.Now()
 	logFile, err := os.OpenFile(logFileName+"_"+strconv.Itoa(now.Year())+strconv.Itoa(now.YearDay())+strconv.Itoa(now.Hour())+strconv.Itoa(now.Minute())+strconv.Itoa(now.Second())+".log", os.O_CREATE|os.O_WRONLY, 0666)
@@ -333,7 +335,7 @@ func main() {
 	dbUri := "neo4j://" + neoHost + ":" + neoPort
 
 	log.Println("Connecting to Neo4j at " + dbUri)
-	driver, err := neo4j.NewDriverWithContext(dbUri, neo4j.BasicAuth("neo4j", ".2p5Rxpn201", ""))
+	driver, err := neo4j.NewDriverWithContext(dbUri, neo4j.BasicAuth(neoUser, neoPass, ""))
 	if err != nil {
 		log.Fatal("Can't connect to Neo4j database " + dbUri + ": " + err.Error())
 	}
